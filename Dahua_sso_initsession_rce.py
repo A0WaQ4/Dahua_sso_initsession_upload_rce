@@ -16,6 +16,9 @@ import re
 import requests
 import json
 
+# Author:A0WaQ4
+# Github:https://github.com/A0WaQ4
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 proxies = {
     'http':'http://127.0.0.1:8080',
