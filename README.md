@@ -9,7 +9,7 @@
 使用前安装依赖
 
 ```
-pip intall -r requirements.txt
+pip install -r requirements.txt
 ```
 
 1.单个目标进行测试
